@@ -1,10 +1,11 @@
 import React from "react";
-import Gallery from "../components/Gallery";
+import CardList from "../components/CardList";
+import properties from "../logements.json"
 
 function Homepage() {
   return <div>
   <h1>Bienvenue sur la page d'accueil</h1>
-  <Gallery />
+  <CardList properties={properties} />
   </div>;
 }
 

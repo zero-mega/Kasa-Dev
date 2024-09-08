@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/card.sass";
 import PropTypes from "prop-types";
 
 function Card({ property }) {

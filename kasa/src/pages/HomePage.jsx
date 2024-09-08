@@ -1,11 +1,14 @@
 import React from "react";
+import "../styles/main.sass"
 import CardList from "../components/CardList";
 import properties from "../logements.json"
 
+
 function Homepage() {
   return <div>
-  <h1>Bienvenue sur la page d'accueil</h1>
-  <CardList properties={properties} />
+ <div className="gallery">
+ <CardList properties={properties} />
+ </div>
   </div>;
 }
 

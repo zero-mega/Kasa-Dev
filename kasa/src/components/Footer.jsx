@@ -1,9 +1,11 @@
 import React from 'react';
+import '../styles/footer.sass';
+import logo from '../assets/logo_w.png';
 
 function Footer() {
   return <footer>
-    <div>Logo Footer</div>
-    Footer content here !
+    <img src={logo} alt="logo" />
+    <p>© 2020 Kasa. All rights reserved</p>
   </footer>;
 }
 

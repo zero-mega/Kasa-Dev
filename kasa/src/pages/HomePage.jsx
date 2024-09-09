@@ -5,11 +5,7 @@ import properties from "../logements.json"
 
 
 function Homepage() {
-  return <div>
- <div className="gallery">
- <CardList properties={properties} />
- </div>
-  </div>;
+  return <CardList properties={properties} />;
 }
 
 export default Homepage;

@@ -1,18 +1,54 @@
 .collapse-menu
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     width: 100%
     ul
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        gap: 20px
+        gap: 30px
         padding: 0
         margin: 0
         width: 100%
     li
         display: flex
         justify-content: space-between
-        justify-items: center
+        align-items: center
         list-style: none
-        background-color: orange
-        width: 80%
+        height: 54px
+        background-color: #FF6060
+        border-radius: 5px
+
+        width: 70%
+        h2
+            margin: 0
+            padding: 10px 0 8px 15px
+            color: white
+        button
+            border: none
+            background: none
+            cursor: pointer
+            color: white
+            padding: 11px 20px 9px 0
+            
+.collapse-content
+    background-color: #f8f8f8
+    width: 70%
+    p
+        padding: 20px
+        margin: 0
+.collapse-container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+.hidden 
+    display: none
+
+.show 
+    display: block
+

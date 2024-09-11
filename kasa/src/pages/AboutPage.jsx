@@ -1,12 +1,12 @@
 import React from "react";
-import About from "../components/About";
+import CollapseMenu from "../components/CollapseMenu";
+import "../styles/main.sass";
 
 function AboutPage() {
   return (
-    <div>
-      <h1>Bienvenue sur la page A propos de Kasa</h1>
-      <About />
-    </div>
+    
+      <CollapseMenu />
+    
   );
 }
 

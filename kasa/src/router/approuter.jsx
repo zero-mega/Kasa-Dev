@@ -9,7 +9,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <ErrorPage />,
     children: [
       {
         path: "/about",
@@ -22,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <ProductPage />,
+      },
+      {
+        path: "*", // 404 page
+        element: <ErrorPage />,
       },
     ],
   },

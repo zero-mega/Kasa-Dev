@@ -1,14 +1,24 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import properties from "../logements.json";
 
 function ProductPage() {
-  const { id } = useParams(); // Récupère le paramètre d'URL `id`
+  const { id } = useParams(); 
+  const property = properties.find((property) => property.id === id);
+
+  if (!property) {
+    return <div>Logement introuvable</div>;
+  }
 
   return (
-    <div>
-      <h1>Détails du produit {id}</h1>
+    <div className="product-page">
+      <h1>{property.title}</h1>
+      <img src={property.cover} alt={property.title} />
+      <p>{property.description}</p>
+      {/* Ajoutez d'autres informations comme l'équipement, la note, etc. */}
     </div>
   );
 }
+
 
 export default ProductPage;

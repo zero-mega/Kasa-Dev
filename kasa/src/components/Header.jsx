@@ -19,8 +19,8 @@ const bannerTitle = isHome ? 'Chez vous, partout et ailleurs' : '';
     <img src={logo} alt="logo" />
     <nav>
     <ul>
-      <li><a href='/'>Accueil</a></li>
-      <li><a href='/about'>A propos</a></li>
+      <li className={location.pathname === '/' ? 'active' : ''}><a href='/'>Accueil</a></li>
+      <li className={location.pathname === '/about' ? 'active' : ''}><a href='/about'>A propos</a></li>
       </ul>
     </nav>
   </header>

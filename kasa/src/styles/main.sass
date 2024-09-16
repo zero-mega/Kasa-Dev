@@ -1,11 +1,17 @@
 .card-list
     display: grid
-    grid-template-columns: 1fr 1fr 1fr
+    grid-template-columns: repeat(3, 1fr)
     gap: 60px
     padding: 46px 50px 43px 50px
-    margin: 0 100px
     background-color: #F6F6F6
     border-radius: 20px
+    width: 100%
+    max-width: 1440px
+    
+    a
+        display: block
+        height: 340px
+        width: 100%
 
 #root
     display: flex
@@ -16,9 +22,7 @@
 
 main
     display: flex
-    flex-direction: column
     justify-content: center
     align-items: center
     width: 100%
-    padding: 0 100px
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/header.sass';
 import Banner from './Banner';
 import logo from '../assets/logo.png';
 import homebanner from '../assets/homebanner.png';

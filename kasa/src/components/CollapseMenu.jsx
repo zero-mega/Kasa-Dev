@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../styles/collapse.sass';
 
 function CollapseMenu() {
 

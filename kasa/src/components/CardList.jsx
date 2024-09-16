@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/card.sass";
 import PropTypes from "prop-types";
 
 function CardList({ properties }) {

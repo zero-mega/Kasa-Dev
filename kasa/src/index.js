@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import "./styles/index.sass";
+import "./styles/main.sass";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./App";

@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import properties from "../logements.json";
 import ErrorPage from "./ErrorPage";
+import CollapseMenu from "../components/CollapseMenu";
 import { FaStar } from "react-icons/fa";
 
 function ProductPage() {
@@ -12,39 +13,52 @@ function ProductPage() {
     return <ErrorPage />;
   }
 
+  const productSections = [
+    {
+      title: "Description",
+      content: property.description,
+    },
+    {
+      title: "Équipements",
+      content: property.equipments,
+    },
+  ];
+
   return (
     <>
-       <div className="product-page">
-      <img src={property.cover} alt={property.title} />
-      
-      <div className="product-info">
-      <div className="product-details">
-        <h1>{property.title}</h1>
-        <p>{property.location}</p>
-      </div>
-      <div className="product-author">
-        <img src={property.host.picture} alt={property.host.name} />
-        <p>{property.host.name}</p>
-      </div>
-      </div>
+      <div className="product-page">
+        <img src={property.cover} alt={property.title} />
 
-      <div className="product-reviews">
-        <ul>
-          {property.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
-        <div className="stars">
-          {[...Array(5)].map((_, i) => (
-            <FaStar key={i} className={i < property.rating ? "fas fa-star" : "far fa-star"} />
-          ))}
+        <div className="product-info">
+          <div className="product-details">
+            <h1>{property.title}</h1>
+            <p>{property.location}</p>
+          </div>
+          <div className="product-author">
+            <img src={property.host.picture} alt={property.host.name} />
+            <p>{property.host.name}</p>
+          </div>
         </div>
-      </div>
 
-    </div>
+        <div className="product-reviews">
+          <ul>
+            {property.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+          <div className="stars">
+            {[...Array(5)].map((_, i) => (
+              <FaStar
+                key={i}
+                className={i < property.rating ? "fas fa-star" : "far fa-star"}
+              />
+            ))}
+          </div>
+        </div>
+          <CollapseMenu sections={productSections} />
+      </div>
     </>
   );
 }
 
 export default ProductPage;
-

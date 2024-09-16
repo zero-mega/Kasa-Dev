@@ -7,11 +7,13 @@ import { Outlet } from "react-router-dom";
 function Layout() {
     return (
         <>
-        <Header />
+       <div className="content">
+       <Header />
         <main>
           <Outlet /> {}
         </main>
-        <Footer />
+       </div>
+       <Footer />
       </>
     );
   }

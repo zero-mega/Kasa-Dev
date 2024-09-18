@@ -25,7 +25,6 @@ function ProductPage() {
   ];
 
   return (
-    <>
       <div className="product-page">
         <img src={property.cover} alt={property.title} />
 
@@ -47,17 +46,16 @@ function ProductPage() {
             ))}
           </ul>
           <div className="stars">
-            {[...Array(5)].map((_, i) => (
+            {Array.from({ length: 5 }).map((_, i) => (
               <FaStar
-                key={i}
-                className={i < property.rating ? "fas fa-star" : "far fa-star"}
+                key={`${property.id}-${i}`}
+                className={i < property.rating ? "fas fa-star star-active" : "far fa-star star-inactive"}
               />
             ))}
           </div>
         </div>
           <CollapseMenu sections={productSections} />
       </div>
-    </>
   );
 }
 

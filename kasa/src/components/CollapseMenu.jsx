@@ -18,7 +18,7 @@ function CollapseMenu({ sections }) {
               <h2>{section.title}</h2>
               <button
                 type='button'
-                className='collapse-btn'
+                className={`collapse-btn ${open[index] ? "open" : ""}`}
                 onClick={() => handleToggle(index)}>
                 {open[index] ? (
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
@@ -50,3 +50,4 @@ function CollapseMenu({ sections }) {
 }
 
 export default CollapseMenu;
+

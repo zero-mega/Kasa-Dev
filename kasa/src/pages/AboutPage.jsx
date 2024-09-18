@@ -23,9 +23,9 @@ function AboutPage() {
   ];
   
   return (
-    
+    <div className="about-page">
       <CollapseMenu sections={aboutsSections}/>
-    
+    </div>
   );
 }
 

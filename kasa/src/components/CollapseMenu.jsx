@@ -32,7 +32,15 @@ function CollapseMenu({ sections }) {
               </button>
             </li>
             <div className={`collapse-content ${open[index] ? "show" : "hidden"}`}>
-              <p>{section.content}</p>
+              {Array.isArray(section.content) ? (
+                <ul>
+                  {section.content.map((equipment) => (
+                    <li key={equipment}>{equipment}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>{section.content}</p>
+              )}
             </div>
           </div>
         ))}
